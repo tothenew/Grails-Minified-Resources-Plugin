@@ -1,0 +1,19 @@
+<plugin name='minified-resources' version='0.1' grailsVersion='1.2 &gt; *'>
+  <author>&lt;a href="http://www.intelligrape.com/blog/author/himanshu/"&gt;Himanshu Seth&lt;/a&gt;</author>
+  <authorEmail>himanshu@intelligrape.com</authorEmail>
+  <title>Minified Resources</title>
+  <description>\
+Minifies the css and js static resources using the Resources plugin framework. The minification process
+is same as what Burt Beckwith did in UI-Performance plugin.
+</description>
+  <documentation>http://grails.org/plugin/minified-resources</documentation>
+  <resources>
+    <resource>UrlMappings</resource>
+    <resource>org.grails.plugin.minify.MinifyResourceMapper</resource>
+    <resource>com.grails.plugin.resource.minify.MinifyService</resource>
+  </resources>
+  <dependencies>
+    <plugin name='resources' version='1.0-alpha11 &gt; *' />
+  </dependencies>
+  <behavior />
+</plugin>

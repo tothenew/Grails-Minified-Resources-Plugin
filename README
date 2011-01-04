@@ -1,0 +1,2 @@
+This repo is for the plugin minified-resources which will fall under the 'resources' plugin umbrella. It uses the resources plugin framework to hook
+into the resource rendering process to minify the CSS and the JS files automatically
