@@ -7,6 +7,11 @@ import org.codehaus.groovy.grails.commons.ConfigurationHolder
 class MinifyService {
 
 	static transactional = false
+	final static Boolean DEFAULT_MUNGE_VALUE = true
+	final static Boolean DEFAULT_PRESERVE_SEMICOLONS_VALUE = false
+	final static Boolean DEFAULT_DISABLE_OPTIMIZATIONS_VALUE = false
+	final static Boolean DEFAULT_VERBOSE_VALUE = false
+
 
 	def getMinifiedResourcesConfig() {
 			ConfigurationHolder.config.grails.resources.minify
@@ -47,19 +52,19 @@ class MinifyService {
 	}
 
 	private boolean getMunge() {
-		return minifiedResourcesConfig.munge  ?: true
+		return minifiedResourcesConfig.munge  ?: DEFAULT_MUNGE_VALUE
 	}
 
 	private boolean getPreserveAllSemiColons(){
-		return minifiedResourcesConfig.preserveAllSemiColons  ?: false
+		return minifiedResourcesConfig.preserveAllSemiColons  ?: DEFAULT_PRESERVE_SEMICOLONS_VALUE
 
 	}
 	private boolean getDisableOptimizations(){
-		return minifiedResourcesConfig.disableOptimizations  ?: false
+		return minifiedResourcesConfig.disableOptimizations  ?: DEFAULT_DISABLE_OPTIMIZATIONS_VALUE
 
 	}
 	private boolean getVerbose(){
-		return minifiedResourcesConfig.verbose  ?: false
+		return minifiedResourcesConfig.verbose  ?: DEFAULT_VERBOSE_VALUE
 
 	}
 
