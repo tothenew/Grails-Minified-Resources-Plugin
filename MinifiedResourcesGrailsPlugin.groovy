@@ -22,14 +22,14 @@ class MinifiedResourcesGrailsPlugin {
 
     def author = '<a href="http://www.intelligrape.com/blog/author/himanshu/">Himanshu Seth</a>'
     def authorEmail = "himanshu@intelligrape.com"
-    def title = "Minified Resources"
+    def title = "YUI Minified Resources"
     def description = '''\\
 Minifies the css and js static resources using the Resources plugin framework. The minification process uses the
 <a href="http://yuilibrary.com/projects/yuicompressor/">YUI Compression</a>(version 2.4.2) to compress the css and js files.
 '''
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/minified-resources"
+    def documentation = "http://grails.org/plugin/yui-minified-resources"
 
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before 
