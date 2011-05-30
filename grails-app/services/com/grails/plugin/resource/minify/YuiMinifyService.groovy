@@ -4,7 +4,7 @@ import com.yahoo.platform.yui.compressor.CssCompressor
 import com.yahoo.platform.yui.compressor.JavaScriptCompressor
 import org.codehaus.groovy.grails.commons.ConfigurationHolder
 
-class MinifyService {
+class YuiMinifyService {
 
 	static transactional = false
 	final static Boolean DEFAULT_MUNGE_VALUE = true

@@ -3,12 +3,12 @@ package org.grails.plugin.minify;
 import com.grails.plugin.resource.minify.ResourceFileType
 import org.grails.plugin.resource.mapper.MapperPhase
 
-class MinifyResourceMapper {
+class YuiMinifyResourceMapper {
 
 	static defaultExcludes = ['/**/*.png', '/**/*.gif', '/**/*.jpg', '/**/*.jpeg', '/**/*.gz', '/**/*.zip']
 
 	static phase = MapperPhase.COMPRESSION
-	def minifyService
+	def yuiMinifyService
 
 	def map(resource, config) {
 		def originalFile = resource.processedFile
@@ -22,7 +22,7 @@ class MinifyResourceMapper {
 			if (true) {
 				log.debug "Need to process the file $name and minify it to create ${newFilename}."
 				println "Need to process the file $name and minify it to create ${newFilename}."
-				minifyService.minifyResource(fileType, originalFile, minifiedFile)
+				yuiMinifyService.minifyResource(fileType, originalFile, minifiedFile)
 			} else {
 				log.debug "processed file ${newFilename} already exists."
 				println "processed file ${newFilename} already exists."
