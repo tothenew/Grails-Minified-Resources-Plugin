@@ -1,10 +1,10 @@
 class MinifiedResourcesGrailsPlugin {
     // the plugin version
-	def version = "1.0 RC1"
+	def version = "1.0"
 
 	def grailsVersion = "1.2 > *"
 
-	def dependsOn = [resources:'1.0-alpha11 > *']
+	def dependsOn = [resources:'1.0 > *']
 
 	def loadAfter = ['resources']
 
